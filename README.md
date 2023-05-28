@@ -1,4 +1,8 @@
 # jiaoben
+### 综合工具箱
+```shell
+wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && clear && ./box.sh
+```
 
 ### 1、开启root登录、开启bbr、安装 XrayR、安装监控
 ```shell
