@@ -7,6 +7,7 @@ read domain
 echo "请输入您的邮箱地址："
 read email
 rm -rf /etc/letsencrypt/live/$domain
+rm -rf /etc/nginx/sites-available/$domain.conf
 sudo apt install certbot
 certbot certonly --standalone -d $domain --agree-tos -n --email $email
 
