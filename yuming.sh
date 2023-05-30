@@ -6,6 +6,8 @@ read domain
 # 申请免费的域名证书
 echo "请输入您的邮箱地址："
 read email
+rm -rf /etc/letsencrypt/live/$domain
+sudo apt install certbot
 certbot certonly --standalone -d $domain --agree-tos -n --email $email
 
 # 配置nginx
