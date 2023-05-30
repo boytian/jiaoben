@@ -23,3 +23,10 @@ curl -L -o iptables.sh https://raw.githubusercontent.com/boytian/jiaoben/main/ip
 ```shell
 curl -L -o chatgpt.sh https://raw.githubusercontent.com/boytian/jiaoben/main/chatgpt.sh && chmod +x chatgpt.sh  && sudo ./chatgpt.sh
 ```
+
+### 5、申请免费域名
+```shell
+curl -L -o yuming.sh [https://raw.githubusercontent.com/boytian/jiaoben/main/chatgpt.sh](https://raw.githubusercontent.com/boytian/jiaoben/main/yuming.sh) && chmod +x yuming.sh  && sudo ./yuming.sh
+```
+
+
