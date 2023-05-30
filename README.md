@@ -26,7 +26,7 @@ curl -L -o chatgpt.sh https://raw.githubusercontent.com/boytian/jiaoben/main/cha
 
 ### 5、申请免费域名
 ```shell
-curl -L -o yuming.sh [https://raw.githubusercontent.com/boytian/jiaoben/main/chatgpt.sh](https://raw.githubusercontent.com/boytian/jiaoben/main/yuming.sh) && chmod +x yuming.sh  && sudo ./yuming.sh
+curl -L -o yuming.sh https://raw.githubusercontent.com/boytian/jiaoben/main/yuming.sh && chmod +x yuming.sh  && sudo ./yuming.sh
 ```
 
 
