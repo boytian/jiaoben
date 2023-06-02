@@ -15,7 +15,6 @@ then
     apt-get install certbot -y
 fi
 
-# 检查 python-certbot-nginx 是否已经安装
 sudo apt-get install python3-certbot-nginx
 
 # 提示用户输入域名
