@@ -20,7 +20,7 @@ if ! dpkg -l python-certbot-nginx &> /dev/null
 then
     # 如果没有安装，则执行安装命令
     sudo apt-get update
-    sudo apt-get install python-certbot-nginx -y
+    sudo apt-get install python3-certbot-nginx
 fi
 
 # 提示用户输入域名
