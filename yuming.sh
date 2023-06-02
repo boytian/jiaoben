@@ -15,6 +15,14 @@ then
     apt-get install certbot -y
 fi
 
+# 检查 python-certbot-nginx 是否已经安装
+if ! dpkg -l python-certbot-nginx &> /dev/null
+then
+    # 如果没有安装，则执行安装命令
+    sudo apt-get update
+    sudo apt-get install python-certbot-nginx -y
+fi
+
 # 提示用户输入域名
 while true; do
     echo "请输入您的域名："
