@@ -19,6 +19,7 @@ fi
 if ! dpkg -l python3-certbot-nginx &> /dev/null
 then
     # 如果没有安装，则执行安装命令
+    echo "python3-certbot-nginx 未安装，正在安装..."
     sudo apt-get update
     sudo apt-get install python3-certbot-nginx
 fi
