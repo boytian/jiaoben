@@ -1,21 +1,24 @@
 #!/bin/bash
 
+set -e
+
+# 更新软件包列表
+apt-get update
+
 # 检查是否安装了nginx和certbot，如果没有则安装
-if ! command -v nginx &> /dev/null
-then
+if ! dpkg -s nginx &> /dev/null; then
     echo "nginx 未安装，正在安装..."
-    apt-get update
     apt-get install nginx -y
 fi
 
-if ! command -v certbot &> /dev/null
-then
+# 安装certbot的Nginx插件
+apt-get install python3-certbot-nginx -y
+
+if ! dpkg -s certbot &> /dev/null; then
     echo "certbot 未安装，正在安装..."
-    apt-get update
     apt-get install certbot -y
 fi
 
-sudo apt-get install python3-certbot-nginx
 
 # 提示用户输入域名
 while true; do
