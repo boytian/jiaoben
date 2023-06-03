@@ -1,14 +1,18 @@
 #!/bin/bash
-#====================开启root登录================================
+
+set -e
 
 # 1. 设置root用户密码
-read -p "请设置root密码 ：" rootpass
-echo "您的root密码是：$rootpass"
-read -p "请确认您输入的root密码 [y/n]：" confirm
+read -rsp "请设置root密码：" rootpass
+echo -e "\n您的root密码已设置。"
 
-# 确认用户输入是否正确
-if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
-  echo "您输入的不是'y'，脚本将退出。"
+# 2. 确认root密码
+read -rsp "请再次输入root密码：" confirmpass
+echo
+
+# 检查密码是否匹配
+if [[ "$rootpass" != "$confirmpass" ]]; then
+  echo "密码不匹配，请重新运行脚本设置密码。"
   exit 1
 fi
 
