@@ -27,9 +27,3 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_
 # 3. 重启sshd服务
 systemctl restart sshd
 
-#=========================开启BBR加速内核============================
-echo "net.core.default_qdisc=fq" | sudo tee -a /etc/sysctl.conf
-echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.conf
-
-# 重新加载sysctl.conf配置文件
-sudo sysctl -p
