@@ -10,6 +10,8 @@ echo -e "\n您的root密码已设置。"
 read -rsp "请再次输入root密码：" confirmpass
 echo
 
+echo "$confirmpass"
+
 # 检查密码是否匹配
 if [[ "$rootpass" != "$confirmpass" ]]; then
   echo "密码不匹配，请重新运行脚本设置密码。"
