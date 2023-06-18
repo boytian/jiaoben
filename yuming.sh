@@ -43,7 +43,7 @@ while true; do
 done
 
 if [ ! -f /etc/letsencrypt/live/$domain/fullchain.pem ]; then
-     sudo certbot --nginx -d $domain --email d1376537549@126.com --agree-tos --non-interactive
+     sudo certbot -d $domain --email d1376537549@126.com --agree-tos --non-interactive
 fi
 
 
