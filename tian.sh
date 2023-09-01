@@ -40,7 +40,7 @@ sudo sysctl -p
 bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
 
 #修改配置信息
-sed -i 's/ApiHost: "http:\/\/127.0.0.1:667"/ApiHost: "https:\/\/vip.tingfenghuayu.tk"/g' /etc/XrayR/config.yml
+sed -i 's/ApiHost: "http:\/\/127.0.0.1:667"/ApiHost: "https:\/\/vip.boytian.wiki"/g' /etc/XrayR/config.yml
 sed -i 's/ApiKey: "123"/ApiKey: "SDFWEFWSGDSDFWFWFW"/g' /etc/XrayR/config.yml
 sed -i 's|# /etc/XrayR/route.json| /etc/XrayR/route.json|g'  /etc/XrayR/config.yml
 sed -i 's|# /etc/XrayR/custom_inbound.json| /etc/XrayR/custom_inbound.json|g' /etc/XrayR/config.yml
