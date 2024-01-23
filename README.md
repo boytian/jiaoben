@@ -28,5 +28,9 @@ curl -L -o chatgpt.sh https://raw.githubusercontent.com/boytian/jiaoben/main/cha
 ```shell
 curl -L -o yuming.sh https://raw.githubusercontent.com/boytian/jiaoben/main/yuming.sh && chmod +x yuming.sh  && sudo ./yuming.sh
 ```
+### 5、安装游戏
+```shell
+wget -O - install.sh https://raw.githubusercontent.com/boytian/jiaoben/main/install.sh|sh
+```
 
 
