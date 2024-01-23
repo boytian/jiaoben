@@ -29,8 +29,8 @@ Description=pal-server.service
 
 [Service]
 Type=forking
-User=ubuntu
-ExecStart= /root/Steam/steamapps/common/PalServer/run.sh
+User=root
+ExecStart=/root/Steam/steamapps/common/PalServer/run.sh
 
 [Install]
 WantedBy=multi-user.target
