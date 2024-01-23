@@ -10,18 +10,18 @@ sudo apt install steamcmd -y
 mkdir -p ~/.steam/sdk64/
 steamcmd +login anonymous +app_update 2394010 validate +quit
 steamcmd +login anonymous +app_update 1007 +quit
-cp ~/Steam/steamapps/common/Steamworks\ SDK\ Redist/linux64/steamclient.so ~/.steam/sdk64/
+cp /root/Steam/steamapps/common/Steamworks\ SDK\ Redist/linux64/steamclient.so ~/.steam/sdk64/
 
 cat <<EOF >> run.sh
 #!/bin/bash
 
-cd ~/Steam/steamapps/common/PalServer
+cd /root/Steam/steamapps/common/PalServer
 
 (./PalServer.sh >> /tmp/PalServer.log 2>&1 &)
 EOF
 
 chmod +x run.sh
-mv run.sh ~/Steam/steamapps/common/PalServer
+mv run.sh /root/Steam/steamapps/common/PalServer
 
 cat <<EOF >> pal-server.service
 [Unit]
@@ -30,7 +30,7 @@ Description=pal-server.service
 [Service]
 Type=forking
 User=ubuntu
-ExecStart= ~/Steam/steamapps/common/PalServer/run.sh
+ExecStart= /root/Steam/steamapps/common/PalServer/run.sh
 
 [Install]
 WantedBy=multi-user.target
