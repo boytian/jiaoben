@@ -1,0 +1,29 @@
+services:
+   palworld:
+      image: thijsvanloef/palworld-server-docker:latest
+      restart: unless-stopped
+      container_name: palworld-server
+      ports:
+        - 8211:8211/udp
+        - 27015:27015/udp
+      environment:
+         - PUID=1000
+         - PGID=1000
+         - PORT=8211 # Optional but recommended
+         - PLAYERS=16 # Optional but recommended
+         - MULTITHREADING=false
+         - RCON_ENABLED=true
+         - RCON_PORT=25575
+         - ADMIN_PASSWORD="tiantian"
+         - COMMUNITY=false 
+         # - PUBLIC_IP=
+         # Enable this if you want your server to show up in the community servers tab, USE WITH SERVER_PASSWORD!
+         # Enable the environment variables below if you have COMMUNITY=true
+         #- SERVER_PASSWORD="tiantian"
+         #- SERVER_NAME="sddddwwaddsw0803"
+      volumes:
+         - ./palworld:/palworld/
+   rcon:
+      image: outdead/rcon:latest
+      entrypoint: ['/rcon', '-a', 'palworld:25575', '-p', 'adminPasswordHere']
+      profiles: ['rcon'] 
